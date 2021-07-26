@@ -4,6 +4,7 @@ import HomePageBody from '../organisms/HomePageBody';
 import HomePageFooter from '../organisms/HomePageFooter';
 import NavBar from '../organisms/NavBar';
 import Image from '../../images/HeaderBackground.png'
+import LoginForm from '../organisms/LoginForm';
 
 interface Props {
     props?: any
@@ -14,8 +15,10 @@ export const HomePage: React.FC<Props> = () => {
     return (
         <Box className={styles.pageContainer}>
             <NavBar />
-            <Box className={styles.backgroundImageContainer}>
-            </Box>
+            {/* <Box className={styles.backgroundImageContainer}>
+                <LoginForm/>
+            </Box> */}
+            <LoginForm/>
             <Box className={styles.footerContainer} >
                 <HomePageFooter />
             </Box>
@@ -40,7 +43,8 @@ const useStyles = makeStyles({
     },
     backgroundImageContainer: {
         backgroundImage: `url(${Image})`,
-        height: '100%'
+        height: '100%',
+        width: '100%',
     }
 })
 

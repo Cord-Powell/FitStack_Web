@@ -14,23 +14,28 @@ const TextInput: React.FC<Props> = (props: Props) => {
     return(
         
            <TextField 
-           className={styles.textInput} 
+           size='small'
            name={props.name} 
+           className={styles.textField}
            onChange={props.onChange}
            label={props.label}
            value={props.value}
+           variant='outlined'
            /> 
         
     )
 } 
 
 const useStyles = makeStyles({
-    textInput: {
-        marginTop: '1em',
+        textField: {
         marginBottom: '1em',
         borderColor: Colors.salmonPink,
-        border: '1px',
-        height: '2 em'
+        outlineColor: Colors.salmonPink,
+        color: Colors.darkGreyBackground, 
+    },
+    inputLabel: {
+        color: Colors.darkGreyBackground,
+        border: `1px solid ${Colors.salmonPink}`
     }
 })
 
